@@ -1,1 +1,33 @@
+body {
+    margin:0;
+    font-family: Arial;
+    background:#f4f6f9;
+}
 
+.dark {
+    background:#1e1e1e;
+    color:white;
+}
+
+header {
+    background:#8B0000;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container {
+    padding:20px;
+}
+
+.card {
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dark .card {
+    background:#333;
+}
