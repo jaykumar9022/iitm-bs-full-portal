@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <h1 id="title"></h1>
+</header>
+
+<div class="container" id="weeks"></div>
+
+<a href="index.html">⬅ Home</a>
+
+<script src="data.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("course");
+
+let name = "";
+Object.values(courses).forEach(level=>{
+    level.forEach(c=>{
+        if(c.id === id) name = c.name;
+    });
+});
+
+document.getElementById("title").innerText = name;
+
+const container = document.getElementById("weeks");
+for(let i=1;i<=12;i++){
+    container.innerHTML += `
+        <div class="card">
+            <h3>Week ${i}</h3>
+            <p>Answers will be added here.</p>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
