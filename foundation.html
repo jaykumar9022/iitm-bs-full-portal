@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foundation Level</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <h1>Foundation Level Courses</h1>
+</header>
+
+<div class="container" id="courseList"></div>
+
+<a href="index.html">⬅ Back</a>
+
+<script src="data.js"></script>
+<script>
+const list = document.getElementById("courseList");
+courses.foundation.forEach(c => {
+    list.innerHTML += `
+        <div class="card">
+            <h3>${c.name}</h3>
+            <a href="course.html?course=${c.id}">Open</a>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>
