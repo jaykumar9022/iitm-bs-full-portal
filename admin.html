@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<h2>Admin - Add Answer</h2>
+
+<input id="course" placeholder="Course ID">
+<input id="week" placeholder="Week Number">
+<textarea id="answer" placeholder="Answer"></textarea>
+<button onclick="save()">Save</button>
+
+<script>
+function save(){
+    const course = document.getElementById("course").value;
+    const week = document.getElementById("week").value;
+    const ans = document.getElementById("answer").value;
+    localStorage.setItem(course+"-"+week, ans);
+    alert("Saved!");
+}
+</script>
+
+</body>
+</html>
